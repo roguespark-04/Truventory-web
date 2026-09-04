@@ -144,9 +144,9 @@ a:hover { color: var(--sage); }
       "links links";
     align-items: center;
     column-gap: 0.75rem;
-    row-gap: 0.55rem;
+    row-gap: 0.45rem;
     min-height: 0;
-    padding: 0.75rem 0 0.85rem;
+    padding: 0.7rem 0 0.55rem;
   }
   .brand { grid-area: brand; margin-right: 0; }
   .nav-cta {
@@ -159,30 +159,32 @@ a:hover { color: var(--sage); }
   .nav-links {
     grid-area: links;
     order: unset;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     margin-inline: 0;
-    padding: 0.55rem 0 0;
-    gap: 0.4rem 0.5rem;
+    padding: 0.45rem 0 0;
+    gap: 0.15rem;
     overflow: visible;
     border-top: 1px solid rgba(28, 27, 22, 0.06);
     mask-image: none;
-    justify-content: stretch;
   }
-  .nav-links::-webkit-scrollbar { display: none; }
   .nav-links a {
+    flex: 1 1 0;
     justify-content: center;
-    width: 100%;
-    padding: 0.65rem 0.5rem;
-    font-size: 0.9rem;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.45);
-    border: 1px solid rgba(28, 27, 22, 0.06);
-    color: var(--ink);
+    min-width: 0;
+    padding: 0.5rem 0.25rem;
+    font-size: 0.82rem;
+    border-radius: 999px;
+    color: var(--ink-soft);
+    background: transparent;
+    border: none;
   }
   .nav-links a:hover {
-    background: rgba(255, 255, 255, 0.75);
+    color: var(--ink);
+    background: rgba(28, 27, 22, 0.05);
   }
 }
 
