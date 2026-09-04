@@ -9,6 +9,35 @@ window.TRUVENTORY_STORE = {
 (function () {
   const store = window.TRUVENTORY_STORE || {};
 
+function wireNav() {
+    const header = document.querySelector(".site-nav");
+    const toggle = document.querySelector(".nav-toggle");
+    const menu = document.getElementById("site-menu");
+    if (!header || !toggle || !menu) return;
+
+    const setOpen = (open) => {
+      header.classList.toggle("is-open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    };
+
+    toggle.addEventListener("click", () => {
+      setOpen(!header.classList.contains("is-open"));
+    });
+
+    menu.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => setOpen(false));
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") setOpen(false);
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.matchMedia("(min-width: 861px)").matches) setOpen(false);
+    });
+  }
+
   function wireStoreButtons() {
     document.querySelectorAll("[data-store]").forEach((btn) => {
       const kind = btn.getAttribute("data-store");
@@ -206,6 +235,7 @@ window.TRUVENTORY_STORE = {
 
   document.addEventListener("DOMContentLoaded", () => {
     wireStoreButtons();
+  wireNav();
     initPhoneMock();
     initHowSteps();
     initUseCards();
