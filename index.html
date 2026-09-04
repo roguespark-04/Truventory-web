@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Truventory — Room-by-room home inventory</title>
+  <meta name="description" content="Walk each room, snap your things, and keep a local home inventory on your phone. No cloud, no account, no ads. Free for 15 items; Pro unlocks PDF export.">
+  <meta name="theme-color" content="#f6f1ea">
+  <link rel="canonical" href="https://roguespark-04.github.io/Truventory-web/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Truventory — Room-by-room home inventory">
+  <meta property="og:description" content="On-device home inventory. Walk a room, snap items, serials, receipts. No cloud. No account. No ads.">
+  <meta property="og:url" content="https://roguespark-04.github.io/Truventory-web/">
+  <meta property="og:image" content="https://roguespark-04.github.io/Truventory-web/assets/icon-1024.png">
+  <meta property="og:image:alt" content="Truventory app icon">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Truventory — Room-by-room home inventory">
+  <meta name="twitter:description" content="On-device home inventory. No cloud, no account, no ads.">
+  <meta name="twitter:image" content="https://roguespark-04.github.io/Truventory-web/assets/icon-1024.png">
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/favicon-180.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-nav">
+    <div class="wrap inner">
+      <a class="brand" href="index.html">
+        <img src="assets/icon-1024.png" width="36" height="36" alt="">
+        Truventory
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#why">Why</a>
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a class="nav-cta" href="#download">Get the app</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap hero">
+      <div>
+        <div class="eyebrow">
+          <span class="dot" aria-hidden="true"></span>
+          On your phone · No cloud · No account
+        </div>
+        <h1>Your home, cataloged room by room.</h1>
+        <p class="lede">
+          Walk a room. Snap what you see. Save names, values, serials, notes, and receipts —
+          all on this device. Truventory is a personal inventory record, not insurance.
+        </p>
+        <div class="hero-actions" id="download-top">
+          <a class="store-btn" data-store="apple" href="#download" aria-disabled="true" role="link">
+            <span class="badge">Coming soon</span>
+            <span class="glyph" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16.37 12.29c-.03-2.54 2.07-3.76 2.16-3.82-1.18-1.73-3.01-1.97-3.66-2-1.56-.16-3.04.92-3.83.92-.79 0-2.01-.9-3.3-.87-1.7.03-3.26.99-4.13 2.51-1.76 3.05-.45 7.57 1.26 10.05.84 1.21 1.84 2.57 3.15 2.52 1.27-.05 1.75-.82 3.29-.82 1.53 0 1.97.82 3.31.79 1.37-.02 2.24-1.23 3.07-2.45.97-1.41 1.37-2.78 1.39-2.85-.03-.01-2.67-1.03-2.71-4.08zM14.6 4.45c.69-.84 1.16-2 1.03-3.16-1 .04-2.21.67-2.93 1.51-.64.74-1.2 1.93-1.05 3.07 1.11.09 2.25-.56 2.95-1.42z"/></svg>
+            </span>
+            <span class="copy"><span class="kicker">Download on the</span><span class="label">App Store</span></span>
+          </a>
+          <a class="store-btn play" data-store="google" href="#download" aria-disabled="true" role="link">
+            <span class="badge">Coming soon</span>
+            <span class="glyph" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.7c-.3.3-.5.8-.5 1.4v15.8c0 .6.2 1.1.5 1.4l.1.1 8.9-8.9v-.2L3.7 2.6l-.1.1zm11.2 6.4-2.3 2.3 2.3 2.3 5.3-3-5.3-1.6zm-3.4 3.4L3.3 20.9c.2.1.5.2.8.2.3 0 .7-.1 1.1-.3l8.5-4.9-2.3-2.4zm0-2.1 2.3-2.3L5.2 3.2C4.8 3 4.4 2.9 4.1 2.9c-.3 0-.6.1-.8.2l8.1 8.3z"/></svg>
+            </span>
+            <span class="copy"><span class="kicker">Get it on</span><span class="label">Google Play</span></span>
+          </a>
+        </div>
+        <div class="trust-row">
+          <span><span class="dot"></span> No ads</span>
+          <span><span class="dot"></span> No analytics</span>
+          <span><span class="dot"></span> Free phone transfer</span>
+          <span><span class="dot"></span> Pro PDF export</span>
+        </div>
+      </div>
+
+      <div class="phone-stage" data-phone-mock>
+        <div class="phone" aria-label="Interactive app preview">
+          <div class="phone-screen">
+            <!-- Rooms -->
+            <div class="screen-panel is-active" data-screen="0">
+              <div class="ui-top">
+                <div class="ui-title">My Home</div>
+                <div class="ui-sub">$5,320</div>
+              </div>
+              <div class="glass-card room-row"><strong>Living Room</strong><span class="pill">4 · $2,450</span></div>
+              <div class="glass-card room-row"><strong>Kitchen</strong><span class="pill">3 · $1,890</span></div>
+              <div class="glass-card room-row"><strong>Bedroom</strong><span class="pill">2 · $980</span></div>
+              <div class="glass-card" style="margin-top:auto">
+                <div class="ui-sub">Tap a room to open · Add rooms as you walk</div>
+              </div>
+            </div>
+            <!-- Capture -->
+            <div class="screen-panel" data-screen="1">
+              <div class="ui-top">
+                <div class="ui-title">Living Room</div>
+                <div class="ui-sub">4 items</div>
+              </div>
+              <div class="glass-card item-row">
+                <div class="thumb">📺</div>
+                <div class="item-meta"><div class="name">Sony TV 65"</div><div class="hint">Est. $899</div></div>
+                <span class="pill">Photo</span>
+              </div>
+              <div class="glass-card item-row">
+                <div class="thumb">🔊</div>
+                <div class="item-meta"><div class="name">Soundbar</div><div class="hint">Est. $249</div></div>
+                <span class="pill">Photo</span>
+              </div>
+              <div class="glass-card item-row">
+                <div class="thumb">💡</div>
+                <div class="item-meta"><div class="name">Floor lamp</div><div class="hint">Est. $120</div></div>
+                <span class="pill">Notes</span>
+              </div>
+            </div>
+            <!-- Serial OCR -->
+            <div class="screen-panel" data-screen="2">
+              <div class="ui-top">
+                <div class="ui-title">Serial</div>
+                <div class="ui-sub">On-device OCR</div>
+              </div>
+              <div class="ocr-box">
+                <div style="font-weight:700">Photograph the plate</div>
+                <div class="ui-sub" style="margin-top:0.35rem">Tap the number that matches</div>
+                <div class="ocr-chips">
+                  <button type="button" class="chip is-picked" data-ocr-chip="SN-88421X">SN-88421X</button>
+                  <button type="button" class="chip" data-ocr-chip="MODEL-A65">MODEL-A65</button>
+                  <button type="button" class="chip" data-ocr-chip="2024-09">2024-09</button>
+                </div>
+              </div>
+              <div class="glass-card">
+                <div class="ui-sub">Selected serial</div>
+                <strong data-serial-value>SN-88421X</strong>
+              </div>
+            </div>
+            <!-- Totals -->
+            <div class="screen-panel" data-screen="3">
+              <div class="ui-top">
+                <div class="ui-title">Totals</div>
+                <div class="ui-sub">Estimated</div>
+              </div>
+              <div class="glass-card">
+                <div class="ui-sub">Whole home</div>
+                <div class="total-big">$5,320</div>
+                <div class="ui-sub" style="margin-top:0.4rem">9 items · 3 rooms</div>
+              </div>
+              <div class="glass-card room-row"><strong>Living Room</strong><span class="pill">$2,450</span></div>
+              <div class="glass-card room-row"><strong>Kitchen</strong><span class="pill">$1,890</span></div>
+            </div>
+            <!-- Backup / PDF -->
+            <div class="screen-panel" data-screen="4">
+              <div class="ui-top">
+                <div class="ui-title">Your files</div>
+                <div class="ui-sub">You choose where</div>
+              </div>
+              <div class="glass-card">
+                <strong>Move to a new phone</strong>
+                <div class="ui-sub" style="margin-top:0.35rem">.truventory backup with photos · free</div>
+              </div>
+              <div class="pdf-preview">
+                <strong>Home inventory.pdf</strong>
+                <div class="pdf-line"></div>
+                <div class="pdf-line short"></div>
+                <div class="pdf-line"></div>
+                <div style="margin-top:auto;font-size:0.8rem;color:var(--ink-soft)">Save / Share · Truventory Pro</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-dots" role="tablist" aria-label="Preview screens">
+          <button type="button" data-phone-dot class="is-active" aria-label="Rooms" aria-selected="true"></button>
+          <button type="button" data-phone-dot aria-label="Items" aria-selected="false"></button>
+          <button type="button" data-phone-dot aria-label="Serial OCR" aria-selected="false"></button>
+          <button type="button" data-phone-dot aria-label="Totals" aria-selected="false"></button>
+          <button type="button" data-phone-dot aria-label="Backup and PDF" aria-selected="false"></button>
+        </div>
+        <p class="phone-hint">Tap the dots · preview cycles through the flow</p>
+      </div>
+    </div>
+
+    <section id="why">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Why people keep a home inventory</h2>
+          <p>Life gets busy. A quiet record of what you own — photos, serials, estimates — is useful long before you need it.</p>
+        </div>
+        <div class="use-grid">
+          <button type="button" class="use-card" data-use-card aria-expanded="false">
+            <div class="use-icon" aria-hidden="true">📋</div>
+            <h3>Insurance prep</h3>
+            <p class="blurb">Build your own photo-backed record so you have details ready if you ever need to talk with an insurer.</p>
+            <div class="more">
+              Snap items, attach receipt photos, and note serials while everything is still on the shelf.
+              Truventory does <strong>not</strong> file claims, contact insurers, or guarantee a payout — it is your personal file.
+            </div>
+          </button>
+          <button type="button" class="use-card" data-use-card aria-expanded="false">
+            <div class="use-icon" aria-hidden="true">📦</div>
+            <h3>Moving day</h3>
+            <p class="blurb">Room lists and photos make packing, unpacking, and “where did that go?” simpler.</p>
+            <div class="more">
+              Catalog before boxes close. Search by room, name, or notes on the new place.
+              Move phones with a free backup file that includes photos.
+            </div>
+          </button>
+          <button type="button" class="use-card" data-use-card aria-expanded="false">
+            <div class="use-icon" aria-hidden="true">🌿</div>
+            <h3>Peace of mind</h3>
+            <p class="blurb">Know what’s cataloged, what it cost roughly, and which serials you already captured.</p>
+            <div class="more">
+              Everything stays on your phone — no account to manage, no cloud sync to babysit.
+              Expand room by room at your own pace.
+            </div>
+          </button>
+        </div>
+        <p class="disclaimer-note">
+          <strong>Not insurance.</strong> Truventory is a personal inventory record. It does not file insurance claims,
+          contact insurers, partner with insurers, or guarantee that anyone will accept an export or pay a claim.
+        </p>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How it works</h2>
+          <p>Five quiet steps from empty phone to a photo-filled inventory you control.</p>
+        </div>
+        <div class="how" data-how>
+          <div>
+            <div class="step-list" role="tablist" aria-label="Steps">
+              <button type="button" class="step-btn is-active" data-step="0">
+                <span class="step-num">1</span><strong>Rooms</strong>
+                <p>Create rooms as you walk the house.</p>
+              </button>
+              <button type="button" class="step-btn" data-step="1">
+                <span class="step-num">2</span><strong>Capture</strong>
+                <p>Snap items; add value, notes, receipts.</p>
+              </button>
+              <button type="button" class="step-btn" data-step="2">
+                <span class="step-num">3</span><strong>Serials</strong>
+                <p>On-device OCR — tap to pick the number.</p>
+              </button>
+              <button type="button" class="step-btn" data-step="3">
+                <span class="step-num">4</span><strong>Totals</strong>
+                <p>Room and whole-home estimated totals.</p>
+              </button>
+              <button type="button" class="step-btn" data-step="4">
+                <span class="step-num">5</span><strong>Backup / PDF</strong>
+                <p>Free backup; Pro unlocks Save/Share PDF.</p>
+              </button>
+            </div>
+            <div class="scrubber">
+              <label for="step-range" class="ui-sub">Scrub</label>
+              <input id="step-range" type="range" min="0" max="4" value="0" data-step-range>
+            </div>
+          </div>
+          <div class="how-preview">
+            <h3 data-how-title>Walk a room</h3>
+            <p data-how-body>Name Living Room, Kitchen, Garage — whatever matches your home.</p>
+            <div class="mini-ui" data-how-ui></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Built for quiet confidence</h2>
+          <p>Local-first features that stay out of your way — and off the network.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature">
+            <h3>Quick capture</h3>
+            <p>Camera or photo library. Name, estimated value, notes, optional receipt photo.</p>
+          </article>
+          <article class="feature">
+            <h3>Tap-to-pick serials</h3>
+            <p>Photograph a plate; on-device OCR suggests numbers. Nothing uploads.</p>
+          </article>
+          <article class="feature">
+            <h3>Rooms &amp; totals</h3>
+            <p>Estimated totals per room and for the whole house, always on this device.</p>
+          </article>
+          <article class="feature">
+            <h3>Search that stays local</h3>
+            <p>Find by name, serial, notes, or room — without a cloud index.</p>
+          </article>
+          <article class="feature">
+            <h3>Free phone transfer</h3>
+            <p>Export a <code>.truventory</code> backup with photos. Restore does not unlock Pro.</p>
+          </article>
+          <article class="feature">
+            <h3>Pro PDF for your files</h3>
+            <p>Save or share a photo-filled PDF through the system share sheet — you pick the destination.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Simple pricing</h2>
+          <p>Start free. Upgrade when you need more items and PDF export.</p>
+        </div>
+        <div class="pricing-grid">
+          <div class="price-card">
+            <div class="plan">Free</div>
+            <div class="amount">$0</div>
+            <ul>
+              <li>Up to 15 inventory items</li>
+              <li>Rooms, photos, serials, notes, receipts</li>
+              <li>On-device OCR tap-to-pick</li>
+              <li>Free .truventory backup with photos</li>
+              <li>No ads · no account · no cloud</li>
+            </ul>
+          </div>
+          <div class="price-card pro">
+            <div class="plan">Truventory Pro</div>
+            <div class="amount">$15 <span>/ year</span></div>
+            <ul>
+              <li>Removes the 15-item cap</li>
+              <li>Save &amp; Share PDF for your own records</li>
+              <li>Same on-device privacy model</li>
+              <li>Auto-renewing via Apple or Google</li>
+              <li>Not an insurance product</li>
+            </ul>
+          </div>
+        </div>
+        <p class="price-note">
+          Restore purchases re-applies Pro from your store account. Restoring a backup file does not grant Pro.
+          Cancel anytime in your App Store or Google Play subscription settings.
+        </p>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="download-band" id="download">
+        <div>
+          <h2>Coming soon to iOS &amp; Android</h2>
+          <p>
+            Store listings are in progress. Buttons below will light up with real links —
+            for now they are placeholders so the page is store-ready the day apps publish.
+          </p>
+        </div>
+        <div class="hero-actions" style="margin:0">
+          <a class="store-btn" data-store="apple" href="#download" aria-disabled="true" role="link">
+            <span class="badge">Coming soon</span>
+            <span class="glyph" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16.37 12.29c-.03-2.54 2.07-3.76 2.16-3.82-1.18-1.73-3.01-1.97-3.66-2-1.56-.16-3.04.92-3.83.92-.79 0-2.01-.9-3.3-.87-1.7.03-3.26.99-4.13 2.51-1.76 3.05-.45 7.57 1.26 10.05.84 1.21 1.84 2.57 3.15 2.52 1.27-.05 1.75-.82 3.29-.82 1.53 0 1.97.82 3.31.79 1.37-.02 2.24-1.23 3.07-2.45.97-1.41 1.37-2.78 1.39-2.85-.03-.01-2.67-1.03-2.71-4.08zM14.6 4.45c.69-.84 1.16-2 1.03-3.16-1 .04-2.21.67-2.93 1.51-.64.74-1.2 1.93-1.05 3.07 1.11.09 2.25-.56 2.95-1.42z"/></svg>
+            </span>
+            <span class="copy"><span class="kicker">Download on the</span><span class="label">App Store</span></span>
+          </a>
+          <a class="store-btn play" data-store="google" href="#download" aria-disabled="true" role="link">
+            <span class="badge">Coming soon</span>
+            <span class="glyph" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.7c-.3.3-.5.8-.5 1.4v15.8c0 .6.2 1.1.5 1.4l.1.1 8.9-8.9v-.2L3.7 2.6l-.1.1zm11.2 6.4-2.3 2.3 2.3 2.3 5.3-3-5.3-1.6zm-3.4 3.4L3.3 20.9c.2.1.5.2.8.2.3 0 .7-.1 1.1-.3l8.5-4.9-2.3-2.4zm0-2.1 2.3-2.3L5.2 3.2C4.8 3 4.4 2.9 4.1 2.9c-.3 0-.6.1-.8.2l8.1 8.3z"/></svg>
+            </span>
+            <span class="copy"><span class="kicker">Get it on</span><span class="label">Google Play</span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap inner">
+      <div>
+        <strong style="color:var(--ink)">Truventory</strong>
+        · Personal on-device home inventory by Frank / roguespark-04
+      </div>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#download">Download</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
