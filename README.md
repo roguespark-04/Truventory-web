@@ -2,7 +2,7 @@
 
 Public marketing site + Privacy Policy for [Truventory](https://github.com/roguespark-04/Truventory).
 
-**Live:** https://roguespark-04.github.io/Truventory-web/
+**Live:** https://truventory.app/
 
 ## Pages
 
