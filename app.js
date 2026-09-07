@@ -117,7 +117,7 @@ function wireNav() {
     start();
   }
 
-  /* How-it-works scrubber */
+  /* How-it-works steps */
   function initHowSteps() {
     const root = document.querySelector("[data-how]");
     if (!root) return;
@@ -191,7 +191,6 @@ function wireNav() {
     ];
 
     const buttons = [...root.querySelectorAll("[data-step]")];
-    const range = root.querySelector("[data-step-range]");
     const titleEl = root.querySelector("[data-how-title]");
     const bodyEl = root.querySelector("[data-how-body]");
     const uiEl = root.querySelector("[data-how-ui]");
@@ -199,7 +198,6 @@ function wireNav() {
     function setStep(n) {
       const idx = Math.max(0, Math.min(steps.length - 1, n));
       buttons.forEach((b, i) => b.classList.toggle("is-active", i === idx));
-      if (range) range.value = String(idx);
       const s = steps[idx];
       if (titleEl) titleEl.textContent = s.title;
       if (bodyEl) bodyEl.textContent = s.body;
@@ -207,10 +205,6 @@ function wireNav() {
     }
 
     buttons.forEach((b, i) => b.addEventListener("click", () => setStep(i)));
-    if (range) {
-      range.max = String(steps.length - 1);
-      range.addEventListener("input", () => setStep(Number(range.value)));
-    }
     setStep(0);
   }
 
